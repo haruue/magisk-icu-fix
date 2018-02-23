@@ -1,9 +1,21 @@
-# Magisk Module Template
+# ICU zh-hans Digital Unit Fix for Android 8.1+
 
-This `README.md` will be shown in Magisk Manager. Place any information / changelog / notes you like.
+## Overview
 
-**Please update `README.md` if you want to submit your module to the online repo!**
+Since Android 8.1 (android-8.1.0\_r1), [`android.text.formatter.Formatter.formatFileSize()`](https://developer.android.com/reference/android/text/format/Formatter.html#formatFileSize%28android.content.Context%2C%20long%29) starts to use the strings from [ICU](http://site.icu-project.org/) library to format the file size, which contains many some [unnessary Chinese tranlation](https://android.googlesource.com/platform/external/icu/+/android-8.1.0_r1/icu4c/source/data/unit/zh.txt#131). It make us get file size or storage space in `3.12吉字节` instead of `3.12 GB` in Android 8.1+ with zh-hans. 
 
-Github has its own online markdown editor with a preview feature, you can use it to update your `README.md`! If you need more advanced syntax, check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+![](https://pbs.twimg.com/media/DQblQ3hVwAAqOdg.jpg:large)
 
-For more information about modules and repos, please check the [official documentations](https://github.com/topjohnwu/Magisk/blob/master/docs/modules.md)
+Picture via [@sumimakito](https://twitter.com/sumimakito): https://twitter.com/sumimakito/status/938689794204246016
+
+This module replaces the icu data file to fix this problem. 
+
+## 概览
+
+从 Android 8.1 (android-8.1.0\_r1) 开始， [`android.text.formatter.Formatter.formatFileSize()`](https://developer.android.com/reference/android/text/format/Formatter.html#formatFileSize%28android.content.Context%2C%20long%29) 开始使用来自 [ICU](http://site.icu-project.org/) 库的字符串来格式化文件大小， 这个库包含有一些 [不必要的翻译](https://android.googlesource.com/platform/external/icu/+/android-8.1.0_r1/icu4c/source/data/unit/zh.txt#131)， 这使我们在简体中文的 Android 8.1+ 上看到的文件大小、剩余空间之类的东西是 `3.12吉字节` 而不是 `3.12 GB`. 
+
+这个模块更换了 ICU 数据文件来解决这个问题。
+
+## Dowload
+[Release](https://github.com/haruue/magisk-icu-fix/releases)
+
