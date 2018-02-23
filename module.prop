@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=icu-zh-hans-digital-unit-fix-for-api27
+name=ICU zh-hans Digital Unit Fix for Android 8.1+
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=haruue
+description=Replace ICU data file and remove the Simplified Chinese translation in digital unit. ('吉字节' -> 'GB')
 minMagisk=1500
