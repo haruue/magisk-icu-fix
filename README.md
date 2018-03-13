@@ -2,7 +2,7 @@
 
 ## Overview
 
-Since Android 8.1 (android-8.1.0\_r1), [`android.text.formatter.Formatter.formatFileSize()`](https://developer.android.com/reference/android/text/format/Formatter.html#formatFileSize%28android.content.Context%2C%20long%29) starts to use the strings from [ICU](http://site.icu-project.org/) library to format the file size, which contains many some [unnessary Chinese tranlation](https://android.googlesource.com/platform/external/icu/+/android-8.1.0_r1/icu4c/source/data/unit/zh.txt#131). It make us get file size or storage space in `3.12吉字节` instead of `3.12 GB` in Android 8.1+ with zh-hans. 
+Since Android 8.1 (android-8.1.0\_r1), [`android.text.formatter.Formatter.formatFileSize()`](https://developer.android.com/reference/android/text/format/Formatter.html#formatFileSize%28android.content.Context%2C%20long%29) starts to use the strings from [ICU](http://site.icu-project.org/) library to format the file size, which contains many some [unnessary Chinese translations](https://android.googlesource.com/platform/external/icu/+/android-8.1.0_r1/icu4c/source/data/unit/zh.txt#131). It makes us get file size or storage space in `3.12吉字节` instead of `3.12 GB` in Android 8.1+ with zh-hans. 
 
 ![](https://pbs.twimg.com/media/DQblQ3hVwAAqOdg.jpg:large)
 
